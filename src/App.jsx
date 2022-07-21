@@ -11,7 +11,7 @@ import Footer from "./Footer";
 import ReactGA from "react-ga"
 
 //import {Routes,Route,Navigate} from "react-router-dom";
-import {Switch,Route,Redirect} from "react-router-dom";
+import {Switch,Route,Redirect,withRouter} from "react-router-dom";
 
 
  const TRACKING_ID = "UA-235213508-2"
@@ -21,7 +21,7 @@ const App = () =>{
      useEffect(()=>{
          ReactGA.pageview(window.location.pathname)
         console.log("pathvalue:",ReactGA.pageview(window.location.pathname))
-           },[])
+           })
     return(
         <>
         <Navbar/> 
@@ -37,4 +37,4 @@ const App = () =>{
         </>
     )
 }
-export default App;
+export default withRouter(App);
