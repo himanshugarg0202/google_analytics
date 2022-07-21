@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 // we import above javascript to use the dropdown list shown on output page in Dropdown lable.
