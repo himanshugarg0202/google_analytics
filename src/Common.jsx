@@ -1,6 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import useGAEventTracker from "./hook/useGAEventTracker";
+
 const Common = (Props) =>{
+
+    const GAEventsTracker = useGAEventTracker("Web Link")
     return(
         <>
         <section id ="header" className="d-flex align-items-center">
@@ -12,7 +16,11 @@ const Common = (Props) =>{
                     <h1>{Props.name } <strong className="brand-name">DT Digital Labs Pvt. Ltd.</strong></h1>
                     <h2 className="my-3"> We are the team of talented developers.</h2>
                         <div className="mt-3">
-                            <NavLink to={Props.visit} className="btn-get-started">{Props.btname}</NavLink>
+                            <NavLink 
+                            to={Props.visit} 
+                            className="btn-get-started"
+                            onClick={()=>GAEventsTracker(Props.visit)}
+                            >{Props.btname}</NavLink>
 
                         </div>
                    </div>
