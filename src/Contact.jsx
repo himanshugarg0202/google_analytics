@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import useGAEventTracker from "./hook/useGAEventTracker";
 
 const Contact = () =>{
+
+    const GAEventsTracker = useGAEventTracker("External Link")
     
          const [data,setData]=useState(
              {
@@ -23,6 +26,7 @@ const Contact = () =>{
         const formSubmit =(e) => {
             e.preventDefault();
             alert(`My Name is ${data.fullname}.My mobile number is ${data.phone}`);
+            GAEventsTracker("Click event")
         }
     
     return(
