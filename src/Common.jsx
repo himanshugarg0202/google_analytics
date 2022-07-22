@@ -19,7 +19,7 @@ const Common = (Props) =>{
                             <NavLink 
                             to={Props.visit} 
                             className="btn-get-started"
-                            onClick={()=>GAEventsTracker(Props.visit)}
+                            onClick={()=>GAEventsTracker(`${Props.visit}`)}
                             >{Props.btname}</NavLink>
 
                         </div>
