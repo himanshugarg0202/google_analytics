@@ -14,7 +14,7 @@ import ReactGA from "react-ga"
 import {Switch,Route,Redirect,withRouter} from "react-router-dom";
 
 
- const TRACKING_ID = "UA-235213508-2"
+ const TRACKING_ID = "UA-235213508-3"
  ReactGA.initialize(TRACKING_ID)
 const App = () =>{
 
